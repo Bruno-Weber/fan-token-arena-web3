@@ -21,11 +21,11 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-24 bg-gradient-to-b from-background to-secondary/20">
+    <section id="como-funciona" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Como Funciona</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-white/70 max-w-3xl mx-auto">
             Conectamos clubes esportivos e torcedores através de uma plataforma Web3 segura e transparente.
           </p>
         </div>
@@ -37,19 +37,19 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className="sport-card bg-card flex flex-col items-center text-center relative group"
+              className="bg-web3-dark/50 border border-white/10 rounded-xl flex flex-col items-center text-center relative group p-6"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-sport-blue via-web3-primary to-sport-red p-1 rounded-full">
-                <div className="bg-background rounded-full h-16 w-16 flex items-center justify-center">
+                <div className="bg-web3-dark rounded-full h-16 w-16 flex items-center justify-center">
                   {step.icon}
                 </div>
               </div>
               <div className="pt-14">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-web3-primary transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground group-hover:text-foreground transition-colors">
+                <p className="text-white/70 group-hover:text-white transition-colors">
                   {step.description}
                 </p>
               </div>
@@ -58,12 +58,12 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg font-medium max-w-xl mx-auto mb-8">
+          <p className="text-lg font-medium max-w-xl mx-auto mb-8 text-white/80">
             Nossa plataforma garante uma experiência segura, transparente e emocionante para clubes e torcedores.
           </p>
           <a 
             href="#verificacao" 
-            className="inline-flex items-center text-primary font-medium hover:text-primary/80 group"
+            className="inline-flex items-center text-web3-primary font-medium hover:text-white/80 group"
           >
             Saiba mais sobre nossa verificação de CNPJ
             <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
