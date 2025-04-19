@@ -4,82 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 275 70% 57%; /* Cor principal: roxo para Web3 */
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 220 80% 55%; /* Cor secundária: azul esportivo */
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 350 90% 60%; /* Cor de destaque: vermelho vibrante */
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 275 70% 57%;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
+    --background: 240 10% 12%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%;
     --primary: 275 70% 57%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 220 80% 55%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 350 90% 60%;
-    --accent-foreground: 210 40% 98%;
-
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 75%;
+    --accent: 275 70% 57%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
     --ring: 275 70% 57%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.75rem;
   }
 
   html {
@@ -91,7 +35,6 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
@@ -100,11 +43,11 @@
 
 @layer utilities {
   .hero-gradient {
-    @apply bg-gradient-to-r from-web3-primary via-sport-blue to-sport-purple;
+    @apply bg-gradient-to-r from-sport-purple via-sport-blue to-web3-primary;
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sport-blue to-web3-primary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-web3-primary via-sport-blue to-web3-accent;
   }
   
   .sport-card {
@@ -115,13 +58,20 @@
     @apply transform transition-all duration-300 hover:scale-105 active:scale-95;
   }
   
-  .web3-section {
-    @apply relative overflow-hidden;
+  .neon-shadow {
+    @apply shadow-[0_0_15px_rgba(147,51,234,0.3)];
   }
   
-  .web3-section::before {
-    content: "";
-    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-web3-dark/5 pointer-events-none;
+  .neon-border {
+    @apply border border-web3-primary/30 shadow-[0_0_10px_rgba(147,51,234,0.2)];
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px rgba(147,51,234,0.5);
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
   }
 }
 
