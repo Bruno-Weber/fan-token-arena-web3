@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Wallet, Trophy } from "lucide-react";
@@ -33,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Trophy className="h-8 w-8 text-sport-red" />
-          <span className="text-2xl font-bold text-gradient">FanTokenArena</span>
+          <span className="text-2xl font-bold text-gradient">FanBase</span>
         </div>
         
         <div className="hidden md:flex space-x-8 font-medium">

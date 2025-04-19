@@ -30,21 +30,21 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-web3-dark">
       {/* Background images with crossfade animation */}
       <div className="absolute inset-0 z-0">
         {sportImages.map((img, index) => (
           <div
             key={index}
-            className="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center"
+            className="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center opacity-30"
             style={{
               backgroundImage: `url(${img})`,
-              opacity: index === currentImageIndex ? 1 : 0,
+              opacity: index === currentImageIndex ? 0.3 : 0,
             }}
           />
         ))}
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-web3-dark/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-web3-dark/90 to-web3-dark z-10"></div>
       </div>
 
       {/* Content */}
@@ -67,10 +67,17 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-sport-red to-sport-blue hover:opacity-90 btn-animate">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-gradient-to-r from-sport-red to-sport-blue hover:opacity-90 btn-animate shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
+            >
               Criar Fan Token
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 btn-animate">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/20 btn-animate transition-all duration-300 transform hover:-translate-y-1 active:scale-95 hover:border-white/50 shadow-md"
+            >
               Explorar Tokens
             </Button>
           </div>

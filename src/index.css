@@ -81,6 +81,10 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  html {
+    @apply bg-web3-dark text-white;
+  }
 }
 
 @layer base {
@@ -100,7 +104,7 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-web3-primary to-sport-blue;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sport-blue to-web3-primary;
   }
   
   .sport-card {
