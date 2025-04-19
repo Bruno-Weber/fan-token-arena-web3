@@ -1,4 +1,3 @@
-
 import { TrendingUp, Users, Wallet, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -27,14 +26,14 @@ const ClubBenefits = () => {
   ];
 
   return (
-    <section id="clubes" className="py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section id="clubes" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Benefícios para <span className="text-gradient">Clubes</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/70 mb-8">
               Transforme sua relação com os torcedores e abra novas possibilidades de receita e engajamento através dos fan tokens.
             </p>
 
@@ -42,24 +41,24 @@ const ClubBenefits = () => {
               {benefits.map((benefit, index) => (
                 <div 
                   key={index} 
-                  className="p-5 border border-border rounded-xl hover:border-primary/50 transition-all hover:shadow-md"
+                  className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md"
                 >
                   <div className="mb-4">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-bold mb-2 text-white">{benefit.title}</h3>
+                  <p className="text-white/70 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </div>
 
-            <Button className="bg-sport-blue hover:bg-sport-blue/90 btn-animate text-white">
+            <Button className="bg-sport-blue hover:bg-sport-blue/90 text-white btn-animate">
               Criar Fan Token para seu Clube
             </Button>
           </div>
 
           <div className="md:w-1/2 relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <img 
                 src="https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop"
                 alt="Estádio cheio de torcedores" 
@@ -72,7 +71,7 @@ const ClubBenefits = () => {
                     Clubes aumentaram sua receita em até 30% no primeiro ano após o lançamento de fan tokens.
                   </p>
                   <div className="flex items-center space-x-2">
-                    <div className="bg-white rounded-full h-10 w-10 flex items-center justify-center">
+                    <div className="bg-web3-dark rounded-full h-10 w-10 flex items-center justify-center">
                       <Trophy className="h-6 w-6 text-sport-red" />
                     </div>
                     <div>
@@ -84,27 +83,26 @@ const ClubBenefits = () => {
               </div>
             </div>
 
-            {/* Estatísticas flutuantes */}
-            <div className="absolute -top-10 -right-10 bg-white rounded-lg shadow-xl p-4 animate-float">
+            <div className="absolute -top-10 -right-10 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float">
               <div className="flex items-center space-x-3">
                 <div className="bg-sport-blue/10 p-2 rounded-full">
                   <TrendingUp className="h-5 w-5 text-sport-blue" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">+45%</p>
-                  <p className="text-xs text-muted-foreground">Aumento de receita</p>
+                  <p className="text-2xl font-bold text-white">+45%</p>
+                  <p className="text-xs text-white/70">Aumento de receita</p>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -bottom-5 -left-5 bg-white rounded-lg shadow-xl p-4 animate-float" style={{ animationDelay: "1.5s" }}>
+            <div className="absolute -bottom-5 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" style={{ animationDelay: "1.5s" }}>
               <div className="flex items-center space-x-3">
                 <div className="bg-sport-green/10 p-2 rounded-full">
                   <Users className="h-5 w-5 text-sport-green" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">3.2M</p>
-                  <p className="text-xs text-muted-foreground">Fãs engajados</p>
+                  <p className="text-2xl font-bold text-white">3.2M</p>
+                  <p className="text-xs text-white/70">Fãs engajados</p>
                 </div>
               </div>
             </div>
