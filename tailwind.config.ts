@@ -52,6 +52,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        // Cores esportivas e Web3
+        sport: {
+          red: '#EA384C', // Vermelho vibrante para times
+          blue: '#0EA5E9', // Azul para times
+          green: '#10B981', // Verde para campos
+          yellow: '#F59E0B', // Amarelo para destaque
+          purple: '#8B5CF6', // Roxo para elementos Web3
+        },
+        web3: {
+          primary: '#9333EA', // Principal cor Web3
+          secondary: '#7E69AB', // Cor secundária
+          accent: '#D946EF', // Cor de destaque
+          light: '#E9D5FF', // Cor clara
+          dark: '#221F26', // Cor escura
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
