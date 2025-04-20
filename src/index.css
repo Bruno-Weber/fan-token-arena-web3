@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 240 10% 12%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 15%;
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 12%;
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 275 70% 57%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 10% 15%;
+    --secondary: 240 10% 3.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 240 10% 20%;
-    --muted-foreground: 240 5% 75%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 84.9%;
     --accent: 275 70% 57%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
+    --border: 275 70% 57%;
+    --input: 240 10% 3.9%;
     --ring: 275 70% 57%;
     --radius: 0.75rem;
   }
@@ -68,6 +68,18 @@
   
   .neon-text {
     text-shadow: 0 0 10px rgba(147,51,234,0.5);
+  }
+  
+  .neon-glow {
+    text-shadow: 0 0 10px rgba(147,51,234,0.5),
+                 0 0 20px rgba(147,51,234,0.3),
+                 0 0 30px rgba(147,51,234,0.2);
+  }
+  
+  .neon-box {
+    box-shadow: 0 0 10px rgba(147,51,234,0.5),
+                0 0 20px rgba(147,51,234,0.3),
+                0 0 30px rgba(147,51,234,0.2);
   }
 
   .glass-card {

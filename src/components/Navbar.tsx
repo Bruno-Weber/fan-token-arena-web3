@@ -1,24 +1,18 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Wallet, Trophy } from "lucide-react";
+import { Wallet } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -31,8 +25,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <Trophy className="h-8 w-8 text-sport-red" />
-          <span className="text-2xl font-bold text-gradient">FanBase</span>
+          <img
+            src="/lovable-uploads/7f03ad53-171a-4f4a-b2aa-2d2066c42757.png"
+            alt="TokenArena Logo"
+            className="h-10 w-10 object-contain"
+          />
+          <span className="text-2xl font-bold neon-glow">TokenArena</span>
         </div>
         
         <div className="hidden md:flex space-x-8 font-medium">
@@ -51,11 +49,11 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="btn-animate hidden sm:flex">
+          <Button variant="outline" size="sm" className="hidden sm:flex neon-box">
             <Wallet className="mr-2 h-4 w-4" />
             Conectar Carteira
           </Button>
-          <Button className="btn-animate bg-primary">
+          <Button className="bg-primary hover:bg-primary/90 neon-box">
             Criar Token
           </Button>
         </div>

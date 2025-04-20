@@ -1,18 +1,20 @@
-
-import { Trophy, Twitter, Instagram, Facebook, Github, Linkedin } from "lucide-react";
+import { Twitter, Instagram, Facebook, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-web3-dark text-white py-16">
+    <footer className="bg-background text-white py-16 border-t border-primary/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Logo e Descrição */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Trophy className="h-8 w-8 text-sport-red" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-sport-red to-sport-blue bg-clip-text text-transparent">FanTokenArena</span>
+              <img
+                src="/lovable-uploads/7f03ad53-171a-4f4a-b2aa-2d2066c42757.png"
+                alt="TokenArena Logo"
+                className="h-10 w-10 object-contain"
+              />
+              <span className="text-2xl font-bold neon-glow">TokenArena</span>
             </div>
             <p className="text-white/70">
               Conectando clubes esportivos e torcedores através de fan tokens verificados e seguros na Web3.
@@ -36,7 +38,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Rápidos */}
           <div>
             <h3 className="text-lg font-bold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
@@ -58,7 +59,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Suporte */}
           <div>
             <h3 className="text-lg font-bold mb-6">Suporte</h3>
             <ul className="space-y-3">
@@ -80,7 +80,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h3 className="text-lg font-bold mb-6">Newsletter</h3>
             <p className="text-white/70 mb-4">
@@ -101,7 +100,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            &copy; {currentYear} FanTokenArena. Todos os direitos reservados.
+            &copy; {currentYear} TokenArena. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Privacidade</a>
