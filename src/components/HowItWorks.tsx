@@ -13,7 +13,7 @@ const HowItWorks = () => {
     title: "Engajamento da Torcida",
     description: "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens."
   }];
-  return <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95">
+  return <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95 bg-zinc-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient neon-text">Como Funciona</h2>
