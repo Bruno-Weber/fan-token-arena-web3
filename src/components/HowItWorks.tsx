@@ -1,27 +1,19 @@
-
 import { Trophy, Wallet, Bitcoin } from "lucide-react";
-
 const HowItWorks = () => {
-  const steps = [
-    {
-      icon: <Trophy className="h-12 w-12 text-sport-blue" />,
-      title: "Clubes Verificados",
-      description: "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança."
-    },
-    {
-      icon: <Bitcoin className="h-12 w-12 text-web3-primary" />,
-      title: "Criação de Fan Tokens",
-      description: "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos."
-    },
-    {
-      icon: <Wallet className="h-12 w-12 text-sport-red" />,
-      title: "Engajamento da Torcida",
-      description: "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens."
-    }
-  ];
-
-  return (
-    <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95">
+  const steps = [{
+    icon: <Trophy className="h-12 w-12 text-sport-blue" />,
+    title: "Clubes Verificados",
+    description: "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança."
+  }, {
+    icon: <Bitcoin className="h-12 w-12 text-web3-primary" />,
+    title: "Criação de Fan Tokens",
+    description: "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos."
+  }, {
+    icon: <Wallet className="h-12 w-12 text-sport-red" />,
+    title: "Engajamento da Torcida",
+    description: "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens."
+  }];
+  return <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient neon-text">Como Funciona</h2>
@@ -34,12 +26,9 @@ const HowItWorks = () => {
           {/* Connecting Line with neon effect */}
           <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-sport-blue via-web3-primary to-sport-red opacity-50 neon-shadow"></div>
 
-          {steps.map((step, index) => (
-            <div 
-              key={index} 
-              className="glass-card hover:neon-shadow transition-all duration-500 p-6 group"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          {steps.map((step, index) => <div key={index} className="glass-card hover:neon-shadow transition-all duration-500 p-6 group" style={{
+          animationDelay: `${index * 0.2}s`
+        }}>
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-web3-primary to-sport-blue p-1 rounded-full neon-shadow">
                 <div className="bg-web3-dark rounded-full h-16 w-16 flex items-center justify-center">
                   {step.icon}
@@ -53,25 +42,16 @@ const HowItWorks = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         <div className="mt-16 text-center">
           <p className="text-lg font-medium max-w-xl mx-auto mb-8 text-white/90">
             Nossa plataforma garante uma experiência segura, transparente e emocionante para clubes e torcedores.
           </p>
-          <a 
-            href="#verificacao" 
-            className="inline-flex items-center text-web3-primary font-medium hover:text-web3-accent transition-colors group neon-text"
-          >
-            Saiba mais sobre nossa verificação de CNPJ
-            <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-          </a>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorks;
