@@ -1,32 +1,24 @@
 import { TrendingUp, Users, Wallet, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const ClubBenefits = () => {
-  const benefits = [
-    {
-      icon: <TrendingUp className="h-10 w-10 text-sport-blue" />,
-      title: "Monetização Direta",
-      description: "Crie uma nova fonte de receita recorrente através da venda de fan tokens e transações secundárias."
-    },
-    {
-      icon: <Users className="h-10 w-10 text-sport-green" />,
-      title: "Engajamento da Torcida",
-      description: "Conecte-se com sua torcida globalmente e aumente a participação em decisões do clube."
-    },
-    {
-      icon: <Wallet className="h-10 w-10 text-web3-primary" />,
-      title: "Economia do Clube",
-      description: "Desenvolva um ecossistema econômico próprio em torno do seu token e fidelize seus torcedores."
-    },
-    {
-      icon: <Trophy className="h-10 w-10 text-sport-red" />,
-      title: "Dados e Insights",
-      description: "Acesse informações valiosas sobre sua base de fãs para tomadas de decisão estratégicas."
-    }
-  ];
-
-  return (
-    <section id="clubes" className="py-24 bg-web3-dark">
+  const benefits = [{
+    icon: <TrendingUp className="h-10 w-10 text-sport-blue" />,
+    title: "Monetização Direta",
+    description: "Crie uma nova fonte de receita recorrente através da venda de fan tokens e transações secundárias."
+  }, {
+    icon: <Users className="h-10 w-10 text-sport-green" />,
+    title: "Engajamento da Torcida",
+    description: "Conecte-se com sua torcida globalmente e aumente a participação em decisões do clube."
+  }, {
+    icon: <Wallet className="h-10 w-10 text-web3-primary" />,
+    title: "Economia do Clube",
+    description: "Desenvolva um ecossistema econômico próprio em torno do seu token e fidelize seus torcedores."
+  }, {
+    icon: <Trophy className="h-10 w-10 text-sport-red" />,
+    title: "Dados e Insights",
+    description: "Acesse informações valiosas sobre sua base de fãs para tomadas de decisão estratégicas."
+  }];
+  return <section id="clubes" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
@@ -38,32 +30,21 @@ const ClubBenefits = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={index} 
-                  className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md"
-                >
+              {benefits.map((benefit, index) => <div key={index} className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md">
                   <div className="mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-white">{benefit.title}</h3>
                   <p className="text-white/70 text-sm">{benefit.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
-            <Button className="bg-sport-blue hover:bg-sport-blue/90 text-white btn-animate">
-              Criar Fan Token para seu Clube
-            </Button>
+            <Button className="bg-sport-blue hover:bg-sport-blue/90 text-white btn-animate">LAUNCH APP</Button>
           </div>
 
           <div className="md:w-1/2 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <img 
-                src="https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop"
-                alt="Estádio cheio de torcedores" 
-                className="w-full object-cover h-80"
-              />
+              <img src="https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop" alt="Estádio cheio de torcedores" className="w-full object-cover h-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
@@ -95,7 +76,9 @@ const ClubBenefits = () => {
               </div>
             </div>
 
-            <div className="absolute -bottom-5 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" style={{ animationDelay: "1.5s" }}>
+            <div className="absolute -bottom-5 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" style={{
+            animationDelay: "1.5s"
+          }}>
               <div className="flex items-center space-x-3">
                 <div className="bg-sport-green/10 p-2 rounded-full">
                   <Users className="h-5 w-5 text-sport-green" />
@@ -109,8 +92,6 @@ const ClubBenefits = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ClubBenefits;

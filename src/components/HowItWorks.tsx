@@ -16,8 +16,8 @@ const HowItWorks = () => {
   return <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95 bg-zinc-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient neon-text">Como Funciona</h2>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-gradient neon-text md:text-4xl px-0 text-center">Como Funciona</h2>
+          <p className="text-lg text-white/80 max-w-3xl mx-auto text-center">
             Conectamos clubes esportivos e torcedores através de uma plataforma Web3 segura e transparente.
           </p>
         </div>
@@ -46,9 +46,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg font-medium max-w-xl mx-auto mb-8 text-white/90">
-            Nossa plataforma garante uma experiência segura, transparente e emocionante para clubes e torcedores.
-          </p>
+          
           
         </div>
       </div>
