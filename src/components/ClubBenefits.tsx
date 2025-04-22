@@ -1,3 +1,4 @@
+
 import React from "react";
 import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -54,7 +55,7 @@ const ClubBenefits = () => {
   }];
 
   return (
-    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-24">
+    <SectionFadeIn className="bg-[#0A0A0A] py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
@@ -68,7 +69,7 @@ const ClubBenefits = () => {
               {benefits.map((benefit, index) => (
                 <div 
                   key={index} 
-                  className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md animate-fade-in"
+                  className="p-5 bg-[#1A1A1A] border border-white/10 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md animate-fade-in"
                   style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                 >
                   <div className="mb-4">

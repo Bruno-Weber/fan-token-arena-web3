@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Trophy, Wallet, Bitcoin } from "lucide-react";
 import SectionFadeIn from "./SectionFadeIn";
@@ -18,7 +19,7 @@ const HowItWorks = () => {
   }];
 
   return (
-    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-24">
+    <SectionFadeIn className="bg-[#0A0A0A] py-24">
       <div className="container mx-auto px-4">
         <div className="text-left mb-16">
           <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">
@@ -38,17 +39,17 @@ const HowItWorks = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 relative">
-          <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-sport-blue via-web3-primary to-sport-red opacity-50 neon-shadow"></div>
+          <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-white/20 opacity-50 neon-shadow"></div>
           {steps.map((step, index) => (
             <div
               key={index}
-              className="glass-card hover:neon-shadow transition-all duration-500 p-6 group animate-fade-in"
+              className="bg-[#1A1A1A] hover:neon-shadow transition-all duration-500 p-6 group animate-fade-in rounded-xl"
               style={{
                 animationDelay: `${0.2 + index * 0.15}s`
               }}
             >
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-web3-primary to-sport-blue p-1 rounded-full neon-shadow">
-                <div className="bg-web3-dark rounded-full h-16 w-16 flex items-center justify-center">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white/10 p-1 rounded-full neon-shadow">
+                <div className="bg-[#0A0A0A] rounded-full h-16 w-16 flex items-center justify-center">
                   {step.icon}
                 </div>
               </div>
@@ -62,9 +63,6 @@ const HowItWorks = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-16 text-center">
-          
         </div>
       </div>
     </SectionFadeIn>
