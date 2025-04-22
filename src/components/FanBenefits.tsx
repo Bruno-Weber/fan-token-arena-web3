@@ -1,3 +1,4 @@
+
 import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,16 +11,16 @@ import { useEffect, useState } from "react";
 const FanBenefits = () => {
   const fanImages = [
     {
-      url: "https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop",
-      alt: "Estádio lotado de torcedores"
+      url: "/lovable-uploads/e2370ad2-1498-4723-b2ac-c690e2bfcbb2.png",
+      alt: "Reunião da CBF"
     },
     {
-      url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop",
-      alt: "Torcida comemorando"
+      url: "/lovable-uploads/448692c8-4728-4870-94e7-e92038b9fcdc.png",
+      alt: "Assembleia de clube de futebol"
     },
     {
-      url: "https://images.unsplash.com/photo-1600679472829-3044539ce8ed?w=800&auto=format&fit=crop",
-      alt: "Torcedores vibrando no estádio"
+      url: "/lovable-uploads/1075c7bb-59f4-4104-ae15-906ad2493583.png",
+      alt: "Conselho de administração do clube"
     }
   ];
 
