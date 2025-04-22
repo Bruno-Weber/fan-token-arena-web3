@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
@@ -14,6 +13,15 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleGoToFAQ = () => {
+    const faqSection = document.getElementById("faq");
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.hash = "#faq";
+    }
+  };
 
   return (
     <nav 
@@ -43,12 +51,19 @@ const Navbar = () => {
           <a href="#torcedores" className="text-foreground/90 hover:text-primary transition-colors">
             Para Torcedores
           </a>
-          <a href="#contato" className="text-foreground/90 hover:text-primary transition-colors">
-            Contato
+          <a href="#faq" className="text-foreground/90 hover:text-primary transition-colors">
+            FAQ
           </a>
         </div>
         
         <div className="flex items-center space-x-4">
+          <Button 
+            onClick={handleGoToFAQ}
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary/10"
+          >
+            Ir para FAQ
+          </Button>
           <Button 
             className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
             size="lg"
