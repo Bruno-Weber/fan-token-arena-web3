@@ -57,33 +57,37 @@ const ClubBenefits = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
               Benefícios para <span className="text-gradient">Clubes</span>
             </h2>
-            <p className="text-lg text-white/70 mb-8">
+            <p className="text-lg text-white/70 mb-8 animate-fade-in" style={{ animationDelay: "0.12s" }}>
               Transforme sua relação com os torcedores e abra novas possibilidades de receita e engajamento através dos fan tokens.
             </p>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              {benefits.map((benefit, index) => <div key={index} className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md">
+              {benefits.map((benefit, index) => (
+                <div 
+                  key={index} 
+                  className="p-5 border border-white/10 bg-web3-dark/50 rounded-xl hover:border-web3-primary/50 transition-all hover:shadow-md animate-fade-in"
+                  style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+                >
                   <div className="mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-white">{benefit.title}</h3>
                   <p className="text-white/70 text-sm">{benefit.description}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
-
             <Button 
-              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6 animate-fade-in"
               size="lg"
+              style={{ animationDelay: "0.55s" }}
             >
               <Rocket className="mr-2 h-5 w-5" />
               Launch App
             </Button>
           </div>
-
-          <div className="md:w-1/2 relative">
+          <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <Carousel>
                 <CarouselContent>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
@@ -25,7 +24,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-background">
-      {/* Background images with enhanced visibility */}
       <div className="absolute inset-0 z-0">
         {sportImages.map((img, index) => (
           <div
@@ -37,23 +35,19 @@ const HeroSection = () => {
             }}
           />
         ))}
-        {/* Enhanced gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background z-10"></div>
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 z-20">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 neon-glow">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 neon-glow animate-fade-in">
             Conectando <span className="text-gradient">Torcedores</span> e{" "}
             <span className="text-gradient">Clubes</span> pelo Mundo
           </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-in">
+          <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Crie fan tokens verificados, engaje sua torcida e monetize sua paixão em uma plataforma segura e transparente.
           </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"

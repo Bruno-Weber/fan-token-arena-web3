@@ -18,7 +18,7 @@ const VerificationSection = () => {
   return (
     <section className="section-gradient-bg py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl font-bold text-white">Segurança e Verificação</h2>
           <p className="text-lg text-white/70 mt-4">Garantimos a autenticidade e segurança para clubes e torcedores</p>
         </div>
@@ -26,7 +26,8 @@ const VerificationSection = () => {
           {securityFeatures.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-web3-dark/50 border border-white/10 rounded-xl p-6 hover:border-web3-primary/50 transition-all"
+              className="bg-web3-dark/50 border border-white/10 rounded-xl p-6 hover:border-web3-primary/50 transition-all animate-fade-in"
+              style={{ animationDelay: `${0.15 + index * 0.12}s` }}
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>

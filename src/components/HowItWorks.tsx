@@ -36,17 +36,14 @@ const HowItWorks = () => {
             Conectamos clubes esportivos e torcedores através de uma plataforma Web3 segura e transparente.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Connecting Line with neon effect */}
           <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-sport-blue via-web3-primary to-sport-red opacity-50 neon-shadow"></div>
-
           {steps.map((step, index) => (
             <div
               key={index}
-              className="glass-card hover:neon-shadow transition-all duration-500 p-6 group"
+              className="glass-card hover:neon-shadow transition-all duration-500 p-6 group animate-fade-in"
               style={{
-                animationDelay: `${index * 0.2}s`
+                animationDelay: `${0.2 + index * 0.15}s`
               }}
             >
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-web3-primary to-sport-blue p-1 rounded-full neon-shadow">
@@ -65,9 +62,7 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
-
         <div className="mt-16 text-center">
-          
           
         </div>
       </div>
