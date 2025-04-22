@@ -16,7 +16,7 @@ const HowItWorks = () => {
   }];
 
   return (
-    <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95 bg-zinc-950">
+    <section id="como-funciona" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="text-left mb-16">
           <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">

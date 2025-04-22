@@ -1,4 +1,3 @@
-
 import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,7 +8,6 @@ import {
 import { useEffect, useState } from "react";
 
 const ClubBenefits = () => {
-  // Atualiza o carrossel para mostrar apenas as 3 imagens anexadas pelo usuário
   const clubImages = [
     {
       url: "/lovable-uploads/0281b172-d21c-4809-8a10-2cb45489c2f1.png",
@@ -53,7 +51,8 @@ const ClubBenefits = () => {
     description: "Acesse informações valiosas sobre sua base de fãs para tomadas de decisão estratégicas."
   }];
 
-  return <section id="clubes" className="py-24 bg-web3-dark">
+  return (
+    <section id="clubes" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
@@ -145,8 +144,8 @@ const ClubBenefits = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ClubBenefits;
-
