@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
-import { Trophy, Wallet, Bitcoin, Activity } from "lucide-react";
-import { FloatingCoin, FloatingTrophy, ParticlesBackground, GradientBubble } from "./AnimatedElements";
+import { ParticlesBackground, GradientBubble } from "./AnimatedElements";
+import { motion } from "framer-motion";
+import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 
 const sportImages = [
   "https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=1200&auto=format&fit=crop&q=80",
@@ -13,17 +15,23 @@ const sportImages = [
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
+  // Animações
+  const sectionAnim = useScrollFadeIn({ delay: 0.08, y: 24 });
+  const h1Anim = useScrollFadeIn({ delay: 0.18, y: 24 });
+  const pAnim = useScrollFadeIn({ delay: 0.32, y: 16 });
+  const buttonAnim = useScrollFadeIn({ delay: 0.45, y: 8 });
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % sportImages.length);
     }, 5000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-background">
+    <section ref={sectionAnim.ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-background">
       <div className="absolute inset-0 z-0">
         {sportImages.map((img, index) => (
           <div
@@ -40,22 +48,37 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 z-20">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 neon-glow animate-fade-in">
+          <motion.h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 neon-glow"
+            initial="hidden"
+            animate={h1Anim.controls}
+            variants={h1Anim.variants}
+          >
             Conectando <span className="text-gradient">Torcedores</span> e{" "}
             <span className="text-gradient">Clubes</span> pelo Mundo
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl text-white/90 mb-12"
+            initial="hidden"
+            animate={pAnim.controls}
+            variants={pAnim.variants}
+          >
             Crie fan tokens verificados, engaje sua torcida e monetize sua paixão em uma plataforma segura e transparente.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button 
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            initial="hidden"
+            animate={buttonAnim.controls}
+            variants={buttonAnim.variants}
+          >
+            <Button
               size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
             >
               <Rocket className="mr-2 h-5 w-5" />
               Launch App
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
