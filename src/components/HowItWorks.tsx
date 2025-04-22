@@ -1,5 +1,6 @@
 import React from "react";
 import { Trophy, Wallet, Bitcoin } from "lucide-react";
+import SectionFadeIn from "./SectionFadeIn";
 
 const HowItWorks = () => {
   const steps = [{
@@ -17,7 +18,7 @@ const HowItWorks = () => {
   }];
 
   return (
-    <section className="section-gradient-bg py-24">
+    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-24">
       <div className="container mx-auto px-4">
         <div className="text-left mb-16">
           <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">
@@ -66,7 +67,7 @@ const HowItWorks = () => {
           
         </div>
       </div>
-    </section>
+    </SectionFadeIn>
   );
 };
 
