@@ -19,13 +19,19 @@ const HowItWorks = () => {
     <section id="como-funciona" className="py-24 bg-gradient-to-b from-web3-dark to-web3-dark/95 bg-zinc-950">
       <div className="container mx-auto px-4">
         <div className="text-left mb-16">
-          <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl">
+          <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">
             Como Funciona
           </h2>
-          <h3 className="text-3xl font-bold mb-3 text-white md:text-4xl">
+          <h3
+            className="text-3xl md:text-4xl font-bold mb-3 text-gradient neon-glow animate-fade-in"
+            style={{ animationDelay: "0.08s", animationFillMode: "backwards" }}
+          >
             FAN TOKENS AGORA SÃO MAIS ÚTEIS
           </h3>
-          <p className="text-lg text-white/80 max-w-3xl text-left">
+          <p
+            className="text-lg text-white/80 max-w-3xl text-left animate-fade-in neon-text"
+            style={{ animationDelay: "0.17s", animationFillMode: "backwards" }}
+          >
             Conectamos clubes esportivos e torcedores através de uma plataforma Web3 segura e transparente.
           </p>
         </div>
