@@ -44,7 +44,11 @@ const ClubBenefits = () => {
 
           <div className="md:w-1/2 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <img src="https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop" alt="Estádio cheio de torcedores" className="w-full object-cover h-80" />
+              <img 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop" 
+                alt="Equipe de gestão em reunião" 
+                className="w-full object-cover h-80" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
