@@ -1,7 +1,7 @@
 
 'use client'
 
-import { Suspense, lazy, useState } from 'react'
+import { Suspense, lazy, useState, useEffect } from 'react'
 const Spline = lazy(() => import('@splinetool/react-spline'))
 
 interface SplineSceneProps {
@@ -11,11 +11,24 @@ interface SplineSceneProps {
 
 export function SplineScene({ scene, className }: SplineSceneProps) {
   const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Reset error state if scene URL changes
+  useEffect(() => {
+    setHasError(false);
+    setIsLoading(true);
+  }, [scene]);
 
   // Fallback 3D scene if main scene fails to load
   const handleError = () => {
     console.error("Failed to load Spline scene:", scene);
     setHasError(true);
+    setIsLoading(false);
+  };
+
+  const handleLoad = () => {
+    console.log("Spline scene loaded successfully:", scene);
+    setIsLoading(false);
   };
 
   return (
@@ -31,6 +44,7 @@ export function SplineScene({ scene, className }: SplineSceneProps) {
           scene={scene}
           className={className}
           onError={handleError}
+          onLoad={handleLoad}
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center flex-col">

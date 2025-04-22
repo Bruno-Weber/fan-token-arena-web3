@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -145,6 +146,14 @@
   animation: pulse 3s ease-in-out infinite;
 }
 
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: float 4s ease-in-out infinite;
+}
+
 .animate-slide-in {
   animation: slideIn 0.5s ease-out forwards;
 }
@@ -160,4 +169,24 @@
 
 .mask-image-gradient {
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
