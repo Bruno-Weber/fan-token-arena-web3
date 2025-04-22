@@ -1,8 +1,38 @@
-
 import { Bitcoin, Wallet, Trophy, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 const FanBenefits = () => {
+  const fanImages = [
+    {
+      url: "https://images.unsplash.com/photo-1540317700647-ec69694d70d0?w=800&auto=format&fit=crop",
+      alt: "Estádio lotado de torcedores"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop",
+      alt: "Torcida comemorando"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1600679472829-3044539ce8ed?w=800&auto=format&fit=crop",
+      alt: "Torcedores vibrando no estádio"
+    }
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % fanImages.length);
+    }, 8000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const benefits = [{
     icon: <Bitcoin className="h-10 w-10 text-sport-blue" />,
     title: "Participação em Decisões",
@@ -53,11 +83,19 @@ const FanBenefits = () => {
 
           <div className="md:w-1/2 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <img 
-                src="https://images.unsplash.com/photo-1668894408172-d0d19f4675a0?w=800&auto=format&fit=crop" 
-                alt="Torcedores em estádio" 
-                className="w-full object-cover h-80" 
-              />
+              <Carousel>
+                <CarouselContent>
+                  {fanImages.map((image, index) => (
+                    <CarouselItem key={index} className={index === currentImage ? "block" : "hidden"}>
+                      <img 
+                        src={image.url}
+                        alt={image.alt}
+                        className="w-full object-cover h-80"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>

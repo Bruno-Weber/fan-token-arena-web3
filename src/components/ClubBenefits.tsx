@@ -1,6 +1,38 @@
 import { TrendingUp, Users, Wallet, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
+
 const ClubBenefits = () => {
+  const clubImages = [
+    {
+      url: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop",
+      alt: "Equipe de gestão em reunião"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop",
+      alt: "Executivos analisando dados em monitores"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&auto=format&fit=crop",
+      alt: "Reunião de diretoria"
+    }
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % clubImages.length);
+    }, 8000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const benefits = [{
     icon: <TrendingUp className="h-10 w-10 text-sport-blue" />,
     title: "Monetização Direta",
@@ -18,6 +50,7 @@ const ClubBenefits = () => {
     title: "Dados e Insights",
     description: "Acesse informações valiosas sobre sua base de fãs para tomadas de decisão estratégicas."
   }];
+
   return <section id="clubes" className="py-24 bg-web3-dark">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
@@ -44,11 +77,19 @@ const ClubBenefits = () => {
 
           <div className="md:w-1/2 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop" 
-                alt="Equipe de gestão em reunião" 
-                className="w-full object-cover h-80" 
-              />
+              <Carousel>
+                <CarouselContent>
+                  {clubImages.map((image, index) => (
+                    <CarouselItem key={index} className={index === currentImage ? "block" : "hidden"}>
+                      <img 
+                        src={image.url}
+                        alt={image.alt}
+                        className="w-full object-cover h-80"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
@@ -98,4 +139,5 @@ const ClubBenefits = () => {
       </div>
     </section>;
 };
+
 export default ClubBenefits;
