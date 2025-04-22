@@ -1,4 +1,3 @@
-
 import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,7 +23,6 @@ const FanBenefits = () => {
     }
   ];
 
-  // Novas imagens para o background do card de sucesso
   const bgImages = [
     "/lovable-uploads/84d7c71f-0c61-46f9-acc9-84b5e906f95c.png",
     "/lovable-uploads/4506b950-63c7-4e85-85a8-8fbd035abf20.png",
@@ -42,7 +40,6 @@ const FanBenefits = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Alternância automática para o background a cada 7 segundos
   useEffect(() => {
     const bgTimer = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % bgImages.length);
@@ -119,7 +116,6 @@ const FanBenefits = () => {
                   ))}
                 </CarouselContent>
               </Carousel>
-              {/* Card de sucesso com background dinâmico */}
               <div
                 className="absolute inset-0 flex items-end bg-cover bg-center transition-all duration-1000"
                 style={{
