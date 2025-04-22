@@ -1,4 +1,4 @@
-import { Bitcoin, Wallet, Trophy, TrendingUp } from "lucide-react";
+import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -78,7 +78,13 @@ const FanBenefits = () => {
               ))}
             </div>
 
-            <Button className="bg-sport-blue hover:bg-sport-blue/90 text-white btn-animate">LAUNCH APP</Button>
+            <Button 
+              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+              size="lg"
+            >
+              <Rocket className="mr-2 h-5 w-5" />
+              Launch App
+            </Button>
           </div>
 
           <div className="md:w-1/2 relative">

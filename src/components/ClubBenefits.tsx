@@ -1,4 +1,4 @@
-import { TrendingUp, Users, Wallet, Trophy } from "lucide-react";
+import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -72,7 +72,13 @@ const ClubBenefits = () => {
                 </div>)}
             </div>
 
-            <Button className="bg-sport-blue hover:bg-sport-blue/90 text-white btn-animate">LAUNCH APP</Button>
+            <Button 
+              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+              size="lg"
+            >
+              <Rocket className="mr-2 h-5 w-5" />
+              Launch App
+            </Button>
           </div>
 
           <div className="md:w-1/2 relative">
