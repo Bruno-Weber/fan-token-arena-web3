@@ -1,3 +1,4 @@
+
 import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +24,15 @@ const FanBenefits = () => {
     }
   ];
 
+  // Novas imagens para o background do card de sucesso
+  const bgImages = [
+    "/lovable-uploads/84d7c71f-0c61-46f9-acc9-84b5e906f95c.png",
+    "/lovable-uploads/4506b950-63c7-4e85-85a8-8fbd035abf20.png",
+    "/lovable-uploads/8432dad2-b682-40e8-8291-0c4520aa14aa.png",
+  ];
+
   const [currentImage, setCurrentImage] = useState(0);
+  const [currentBg, setCurrentBg] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,6 +40,14 @@ const FanBenefits = () => {
     }, 8000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  // Alternância automática para o background a cada 7 segundos
+  useEffect(() => {
+    const bgTimer = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % bgImages.length);
+    }, 7000);
+    return () => clearInterval(bgTimer);
   }, []);
 
   const benefits = [{
@@ -79,7 +96,7 @@ const FanBenefits = () => {
             </div>
 
             <Button 
-              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
               size="lg"
             >
               <Rocket className="mr-2 h-5 w-5" />
@@ -102,8 +119,15 @@ const FanBenefits = () => {
                   ))}
                 </CarouselContent>
               </Carousel>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <div className="p-8 text-white">
+              {/* Card de sucesso com background dinâmico */}
+              <div
+                className="absolute inset-0 flex items-end bg-cover bg-center transition-all duration-1000"
+                style={{
+                  backgroundImage: `url(${bgImages[currentBg]})`
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-0 pointer-events-none transition-all duration-1000" />
+                <div className="relative z-10 p-8 text-white w-full">
                   <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
                   <p className="text-white/80 mb-4">
                     Torcedores que participaram de fan tokens aumentaram seu engajamento em até 75%.
