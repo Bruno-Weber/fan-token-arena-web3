@@ -7,7 +7,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import SectionFadeIn from "./SectionFadeIn";
 
 const FanBenefits = () => {
   const fanImages = [
@@ -68,7 +67,7 @@ const FanBenefits = () => {
   }];
 
   return (
-    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-24">
+    <section className="section-gradient-bg py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
@@ -173,7 +172,7 @@ const FanBenefits = () => {
           </div>
         </div>
       </div>
-    </SectionFadeIn>
+    </section>
   );
 };
 
