@@ -1,3 +1,4 @@
+
 import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,18 +9,19 @@ import {
 import { useEffect, useState } from "react";
 
 const ClubBenefits = () => {
+  // Atualiza o carrossel para mostrar apenas as 3 imagens anexadas pelo usuário
   const clubImages = [
     {
-      url: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop",
-      alt: "Equipe de gestão em reunião"
+      url: "/lovable-uploads/0281b172-d21c-4809-8a10-2cb45489c2f1.png",
+      alt: "Reunião da CBF"
     },
     {
-      url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop",
-      alt: "Executivos analisando dados em monitores"
+      url: "/lovable-uploads/32a7a01b-762a-4545-855f-b70c8e3f22c9.png",
+      alt: "Assembleia de clube de futebol"
     },
     {
-      url: "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&auto=format&fit=crop",
-      alt: "Reunião de diretoria"
+      url: "/lovable-uploads/9432b616-6a49-4765-9c12-938accd505e2.png",
+      alt: "Conselho do clube"
     }
   ];
 
@@ -147,3 +149,4 @@ const ClubBenefits = () => {
 };
 
 export default ClubBenefits;
+
