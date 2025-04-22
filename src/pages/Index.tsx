@@ -2,7 +2,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
-import VerificationSection from "@/components/VerificationSection";
 import ClubBenefits from "@/components/ClubBenefits";
 import FanBenefits from "@/components/FanBenefits";
 import FAQSection from "@/components/FAQSection";
@@ -15,7 +14,6 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <HowItWorks />
-      <VerificationSection />
       <ClubBenefits />
       <FanBenefits />
       <FAQSection />
@@ -26,4 +24,3 @@ const Index = () => {
 };
 
 export default Index;
-
