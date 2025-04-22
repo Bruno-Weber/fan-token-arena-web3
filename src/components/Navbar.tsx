@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Wallet } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -49,12 +49,12 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="hidden sm:flex neon-box">
-            <Wallet className="mr-2 h-4 w-4" />
-            Conectar Carteira
-          </Button>
-          <Button className="bg-primary hover:bg-primary/90 neon-box">
-            Criar Token
+          <Button 
+            className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+            size="lg"
+          >
+            <Rocket className="mr-2 h-5 w-5" />
+            Launch App
           </Button>
         </div>
       </div>

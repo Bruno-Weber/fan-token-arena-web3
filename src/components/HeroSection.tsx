@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Rocket } from "lucide-react";
 import { Trophy, Wallet, Bitcoin, Activity } from "lucide-react";
 import { FloatingCoin, FloatingTrophy, ParticlesBackground, GradientBubble } from "./AnimatedElements";
 
@@ -57,14 +58,8 @@ const HeroSection = () => {
               size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
             >
-              Criar Fan Token
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-primary/50 text-white hover:bg-primary/20 transition-all duration-300"
-            >
-              Explorar Tokens
+              <Rocket className="mr-2 h-5 w-5" />
+              Launch App
             </Button>
           </div>
         </div>
