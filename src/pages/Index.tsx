@@ -5,7 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import VerificationSection from "@/components/VerificationSection";
 import ClubBenefits from "@/components/ClubBenefits";
 import FanBenefits from "@/components/FanBenefits";
-import ContactSection from "@/components/ContactSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -18,7 +18,7 @@ const Index = () => {
       <VerificationSection />
       <ClubBenefits />
       <FanBenefits />
-      <ContactSection />
+      <FAQSection />
       <Footer />
       <ScrollToTop />
     </div>
@@ -26,3 +26,4 @@ const Index = () => {
 };
 
 export default Index;
+
