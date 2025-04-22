@@ -1,10 +1,11 @@
+import React from "react";
 import { Twitter, Instagram, Facebook, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background text-white py-16 border-t border-primary/20">
+    <footer className="section-gradient-bg py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">

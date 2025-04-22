@@ -1,3 +1,4 @@
+import React from "react";
 import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,7 +53,7 @@ const ClubBenefits = () => {
   }];
 
   return (
-    <section id="clubes" className="py-24 bg-web3-dark">
+    <section className="section-gradient-bg py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">

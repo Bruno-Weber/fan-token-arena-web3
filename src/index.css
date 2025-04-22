@@ -85,6 +85,10 @@
   .glass-card {
     @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
   }
+
+  .section-gradient-bg {
+    background: linear-gradient(135deg, #1A1F2C 20%, #221F26 60%, #8B5CF6 100%);
+  }
 }
 
 @keyframes float {

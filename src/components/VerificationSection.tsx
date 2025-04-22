@@ -1,4 +1,3 @@
-
 import { Check, Shield, Lock, FileCheck } from "lucide-react";
 
 const VerificationSection = () => {
@@ -17,7 +16,7 @@ const VerificationSection = () => {
   }];
 
   return (
-    <section className="py-24 bg-web3-dark">
+    <section className="section-gradient-bg py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">Segurança e Verificação</h2>

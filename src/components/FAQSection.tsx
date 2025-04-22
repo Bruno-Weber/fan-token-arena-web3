@@ -1,4 +1,4 @@
-
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -32,7 +32,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-web3-dark">
+    <section id="faq" className="section-gradient-bg py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
@@ -72,4 +72,3 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
-
