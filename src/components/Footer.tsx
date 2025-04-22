@@ -1,11 +1,12 @@
 import React from "react";
 import { Twitter, Instagram, Facebook, Github, Linkedin } from "lucide-react";
+import SectionFadeIn from "./SectionFadeIn";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="section-gradient-bg py-12">
+    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-12">
       <div className="container mx-auto px-4 animate-fade-in">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
@@ -110,7 +111,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </SectionFadeIn>
   );
 };
 

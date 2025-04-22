@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Accordion,
@@ -7,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Plus } from "lucide-react";
+import SectionFadeIn from "./SectionFadeIn";
 
 const FAQSection = () => {
   const faqs = [
@@ -33,7 +33,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="section-gradient-bg py-24">
+    <SectionFadeIn className="bg-gradient-to-b from-[#1A1F2C] via-[#221F26] to-[#8B5CF6] py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4">
@@ -68,7 +68,7 @@ const FAQSection = () => {
           </Accordion>
         </div>
       </div>
-    </section>
+    </SectionFadeIn>
   );
 };
 
