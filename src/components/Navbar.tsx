@@ -43,6 +43,9 @@ const Navbar = () => {
           <a href="#torcedores" className="text-foreground/90 hover:text-primary transition-colors">
             Para Torcedores
           </a>
+          <a href="#nfts" className="text-foreground/90 hover:text-primary transition-colors">
+            NFTs
+          </a>
           <a href="#faq" className="text-foreground/90 hover:text-primary transition-colors">
             FAQ
           </a>
