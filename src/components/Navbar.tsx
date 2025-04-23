@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
+import { useScrollTo } from "@/hooks/useScrollTo";
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -11,6 +12,7 @@ const scrollTo = (id: string) => {
 };
 
 const Navbar = () => {
+  const scrollTo = useScrollTo();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {

@@ -14,11 +14,11 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden bg-[#08080B]">
       <Navbar />
       <HeroSection />
-      <HowItWorks />
-      <ClubBenefits />
-      <FanBenefits />
-      <NFTMintSection />
-      <FAQSection />
+      <section id="como-funciona"><HowItWorks /></section>
+      <section id="clubes"><ClubBenefits /></section>
+      <section id="torcedores"><FanBenefits /></section>
+      <section id="nfts"><NFTMintSection /></section>
+      <section id="faq"><FAQSection /></section>
       <Footer />
       <ScrollToTop />
     </div>
