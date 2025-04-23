@@ -1,22 +1,43 @@
 
 import React from "react";
-import { Trophy, Wallet, Bitcoin } from "lucide-react";
+import {
+  Award,
+  Crown,
+  PieChart,
+  User,
+  Users,
+  BarChart,
+  Coins,
+  Flag,
+  Star,
+} from "lucide-react";
 import SectionFadeIn from "./SectionFadeIn";
 
 const HowItWorks = () => {
-  const steps = [{
-    icon: <Trophy className="h-12 w-12 text-sport-blue" />,
-    title: "Clubes Verificados",
-    description: "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança."
-  }, {
-    icon: <Bitcoin className="h-12 w-12 text-web3-primary" />,
-    title: "Criação de Fan Tokens",
-    description: "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos."
-  }, {
-    icon: <Wallet className="h-12 w-12 text-sport-red" />,
-    title: "Engajamento da Torcida",
-    description: "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens."
-  }];
+  // Substituímos os ícones por opções mais detalhadas/ilustrativas da lucide-react:
+  const steps = [
+    {
+      // Troca Trophy ➔ Crown
+      icon: <Crown className="h-12 w-12 text-sport-blue" />,
+      title: "Clubes Verificados",
+      description:
+        "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança.",
+    },
+    {
+      // Troca Bitcoin ➔ Award
+      icon: <Award className="h-12 w-12 text-web3-primary" />,
+      title: "Criação de Fan Tokens",
+      description:
+        "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos.",
+    },
+    {
+      // Troca Wallet ➔ PieChart
+      icon: <PieChart className="h-12 w-12 text-sport-red" />,
+      title: "Engajamento da Torcida",
+      description:
+        "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens.",
+    },
+  ];
 
   return (
     <SectionFadeIn className="bg-[#0A0A0A] py-24">
@@ -39,6 +60,7 @@ const HowItWorks = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 relative">
+          {/* Linha horizontal decorativa permanece */}
           <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-white/20 opacity-50 neon-shadow"></div>
           {steps.map((step, index) => (
             <div
