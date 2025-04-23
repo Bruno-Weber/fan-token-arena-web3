@@ -4,12 +4,6 @@ import {
   Award,
   Crown,
   PieChart,
-  User,
-  Users,
-  BarChart,
-  Coins,
-  Flag,
-  Star,
 } from "lucide-react";
 import SectionFadeIn from "./SectionFadeIn";
 
