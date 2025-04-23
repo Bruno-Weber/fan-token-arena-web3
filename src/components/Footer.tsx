@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Rocket } from "lucide-react";
+import { Mail, Rocket, Discord } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -36,9 +36,13 @@ const Footer = () => {
           <p className="text-gray-400">
             Fique por dentro das últimas novidades e lançamentos.
           </p>
-          <Button className="bg-primary hover:bg-primary/90 neon-box text-lg" size="lg">
-            <Rocket className="mr-2 h-5 w-5" />
-            Launch App
+          <Button 
+            className="bg-primary hover:bg-primary/90 neon-box text-lg" 
+            size="lg"
+            onClick={() => window.open("https://discord.gg/tokenarena", "_blank")}
+          >
+            <Discord className="mr-2 h-5 w-5" />
+            Entrar no Discord
           </Button>
         </div>
       </div>
