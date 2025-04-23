@@ -1,42 +1,56 @@
 
 import React from "react";
 import {
-  Award,
+  Trophy,
   Crown,
-  PieChart,
+  Star,
+  Heart,
+  Award,
 } from "lucide-react";
 import SectionFadeIn from "./SectionFadeIn";
 
-const HowItWorks = () => {
-  // Substituímos os ícones por opções mais detalhadas/ilustrativas da lucide-react:
-  const steps = [
-    {
-      // Troca Trophy ➔ Crown
-      icon: <Crown className="h-12 w-12 text-sport-blue" />,
-      title: "Clubes Verificados",
-      description:
-        "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança.",
-    },
-    {
-      // Troca Bitcoin ➔ Award
-      icon: <Award className="h-12 w-12 text-web3-primary" />,
-      title: "Criação de Fan Tokens",
-      description:
-        "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos.",
-    },
-    {
-      // Troca Wallet ➔ PieChart
-      icon: <PieChart className="h-12 w-12 text-sport-red" />,
-      title: "Engajamento da Torcida",
-      description:
-        "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens.",
-    },
-  ];
+// Novos ícones e cores de fundo diferenciados (só atrás do ícone)
+const steps = [
+  {
+    // Now Trophy, amarelo/dourado
+    icon: (
+      <div className="bg-gradient-to-tr from-[#FFE29F] via-[#FFA99F] to-[#FF719A] p-3 rounded-full animate-pulse shadow-lg transition">
+        <Trophy className="h-12 w-12 text-yellow-400 drop-shadow" />
+      </div>
+    ),
+    title: "Clubes Verificados",
+    description:
+      "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança.",
+  },
+  {
+    // Crown, roxo
+    icon: (
+      <div className="bg-gradient-to-tr from-[#8B5CF6] via-[#9b87f5] to-[#E5DEFF] p-3 rounded-full animate-pulse shadow-lg transition">
+        <Crown className="h-12 w-12 text-white drop-shadow" />
+      </div>
+    ),
+    title: "Criação de Fan Tokens",
+    description:
+      "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos.",
+  },
+  {
+    // Award, corações, rosa
+    icon: (
+      <div className="bg-gradient-to-tr from-[#FFDEE2] via-[#D946EF] to-[#FF4D6A] p-3 rounded-full animate-pulse shadow-lg transition">
+        <Heart className="h-12 w-12 text-pink-400 drop-shadow" />
+      </div>
+    ),
+    title: "Engajamento da Torcida",
+    description:
+      "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens.",
+  },
+];
 
+const HowItWorks = () => {
   return (
-    <SectionFadeIn className="bg-[#0A0A0A] py-24">
+    <SectionFadeIn className="bg-[#0A0A0A] py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-16">
+        <div className="text-left mb-12 md:mb-14">
           <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">
             Como Funciona
           </h2>
@@ -53,9 +67,8 @@ const HowItWorks = () => {
             Conectamos clubes esportivos e torcedores através de uma plataforma Web3 segura e transparente.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Linha horizontal decorativa permanece */}
-          <div className="hidden md:block absolute top-1/3 left-1/4 right-1/4 h-0.5 bg-white/20 opacity-50 neon-shadow"></div>
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 relative">
+          {/* Linha horizontal decorativa removida */}
           {steps.map((step, index) => (
             <div
               key={index}
@@ -64,12 +77,10 @@ const HowItWorks = () => {
                 animationDelay: `${0.2 + index * 0.15}s`
               }}
             >
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white/10 p-1 rounded-full neon-shadow">
-                <div className="bg-[#0A0A0A] rounded-full h-16 w-16 flex items-center justify-center">
-                  {step.icon}
-                </div>
+              <div className="w-full flex justify-center -mt-10 mb-2 relative z-10">
+                {step.icon}
               </div>
-              <div className="pt-14">
+              <div className="pt-2">
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-web3-primary transition-colors neon-text text-left">
                   {step.title}
                 </h3>
@@ -86,3 +97,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+
