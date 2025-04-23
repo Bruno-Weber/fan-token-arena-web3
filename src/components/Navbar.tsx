@@ -36,8 +36,8 @@ const Navbar = () => {
           <a href="#nfts" className="text-foreground/90 hover:text-primary transition-colors">
             NFTs
           </a>
-          <a href="#contato" className="text-foreground/90 hover:text-primary transition-colors">
-            Contato
+          <a href="#faq" className="text-foreground/90 hover:text-primary transition-colors">
+            FAQ
           </a>
         </div>
         
