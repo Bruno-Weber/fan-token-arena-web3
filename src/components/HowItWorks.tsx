@@ -12,7 +12,7 @@ const steps = [
       </div>
     ),
     title: "Clubes Verificados",
-    description: "Instituições esportivas passam por um rigoroso processo de verificação via CNPJ, garantindo autenticidade e confiança.",
+    description: "Instituições esportivas passam por um processo de verificação com KYC.",
   },
   {
     icon: (
@@ -21,7 +21,7 @@ const steps = [
       </div>
     ),
     title: "Criação de Fan Tokens",
-    description: "Tokens exclusivos são criados para cada clube, permitindo aos torcedores participação nas decisões e acesso a benefícios exclusivos.",
+    description: "Tokens exclusivos são criados para cada clube, dando aos torcedores benefícios exclusivos.",
   },
   {
     icon: (
@@ -30,13 +30,13 @@ const steps = [
       </div>
     ),
     title: "Engajamento da Torcida",
-    description: "Os fãs podem adquirir tokens, participar em votações, acessar conteúdos exclusivos e até mesmo lucrar com a valorização dos tokens.",
+    description: "Os fãs podem adquirir tokens, participar em votações e acessar conteúdos exclusivos do seu time do coração.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <SectionFadeIn className="bg-[#0A0A0A] py-10 md:py-14">
+    <SectionFadeIn id="como-funciona" className="scroll-mt-24" className="bg-[#0A0A0A] py-10 md:py-14">
       <div className="container mx-auto px-4">
         <div className="text-left mb-8 md:mb-10">
           <h2 className="text-2xl font-bold mb-2 text-gradient neon-text md:text-3xl animate-fade-in">

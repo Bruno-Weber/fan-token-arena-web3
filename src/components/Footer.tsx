@@ -5,7 +5,7 @@ import { Mail, Rocket, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0B0B0F] text-white py-16">
+    <footer className="bg-gradient-to-b from-[#0A0A0A] to-[#0B0B0F] text-white py-16">
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
         <div className="space-y-6">
           <div className="flex items-center space-x-4">
