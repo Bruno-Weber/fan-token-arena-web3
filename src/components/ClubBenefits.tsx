@@ -135,7 +135,7 @@ const ClubBenefits = () => {
               </div>
             </div>
 
-            <div className="absolute -bottom-5 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" style={{
+            <div className="absolute -bottom-14 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" style={{
             animationDelay: "1.5s"
           }}>
               <div className="flex items-center space-x-3">
