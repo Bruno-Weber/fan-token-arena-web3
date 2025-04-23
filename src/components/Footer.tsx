@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Rocket, Discord } from "lucide-react";
+import { Mail, Rocket, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -41,7 +42,7 @@ const Footer = () => {
             size="lg"
             onClick={() => window.open("https://discord.gg/tokenarena", "_blank")}
           >
-            <Discord className="mr-2 h-5 w-5" />
+            <MessageSquare className="mr-2 h-5 w-5" />
             Entrar no Discord
           </Button>
         </div>
