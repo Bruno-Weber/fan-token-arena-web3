@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -156,7 +155,7 @@ const FanBenefits = () => {
             </div>
 
             <div 
-              className="absolute -bottom-5 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" 
+              className="absolute -bottom-10 -left-5 bg-web3-dark border border-white/10 rounded-lg shadow-xl p-4 animate-float" 
               style={{
                 animationDelay: "1.5s"
               }}
