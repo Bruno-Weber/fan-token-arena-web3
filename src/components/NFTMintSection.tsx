@@ -62,7 +62,7 @@ const NFTMintSection = () => {
   }, []);
 
   return (
-    <SectionFadeIn className="relative py-16 md:py-24 bg-gradient-to-br from-[#0A0A0A] via-[#221F26] to-[#8B5CF6] overflow-hidden">
+    <SectionFadeIn id="nfts" className="scroll-mt-24" className="relative py-16 md:py-24 bg-gradient-to-b from-[#221F26] via-[#8B5CF6] to-[#0A0A0A] overflow-hidden">
       {/* Gradient decorativos animados */}
       <div className="absolute left-0 top-0 h-56 w-56 rounded-full blur-3xl bg-gradient-to-tr from-cyan-400/30 to-violet-400/20 animate-float -z-10" style={{ animationDelay: "1.2s" }} />
       <div className="absolute right-0 bottom-0 h-44 w-44 rounded-full blur-2xl bg-gradient-to-br from-pink-400/30 to-yellow-300/10 animate-float -z-10" style={{ animationDelay: "2.4s" }} />

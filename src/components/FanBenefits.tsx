@@ -68,7 +68,7 @@ const FanBenefits = () => {
   }];
 
   return (
-    <SectionFadeIn className="bg-[#0A0A0A] py-24">
+    <SectionFadeIn id="torcedores" className="scroll-mt-24 py-24 bg-gradient-to-b from-[#0A0A0A] via-[#221F26] to-[#221F26]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
