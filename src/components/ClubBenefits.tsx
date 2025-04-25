@@ -106,7 +106,6 @@ const ClubBenefits = () => {
               </Carousel>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
                   <p className="text-white/80 mb-4">
                     Clubes aumentaram sua receita em até 30% no primeiro ano após o lançamento de fan tokens.
                   </p>

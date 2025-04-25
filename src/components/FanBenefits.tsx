@@ -125,7 +125,6 @@ const FanBenefits = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-0 pointer-events-none transition-all duration-1000" />
                 <div className="relative z-10 p-8 text-white w-full">
-                  <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
                   <p className="text-white/80 mb-4">
                     Torcedores que participaram de fan tokens aumentaram seu engajamento em até 75%.
                   </p>
