@@ -17,7 +17,7 @@ const LaunchAppButton: React.FC<LaunchAppButtonProps> = ({
   ...props
 }) => {
   const handleClick = () => {
-    const href = "https://token-arena-app-hqez.vercel.app/";
+    const href = "https://app.tokenarena.club/";
     window.location.href = href;
   };
 
