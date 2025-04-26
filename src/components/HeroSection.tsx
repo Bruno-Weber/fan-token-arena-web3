@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import LaunchAppButton from "@/components/LaunchAppButton";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { Trophy, Wallet, Bitcoin, Activity } from "lucide-react";
@@ -48,13 +49,11 @@ const HeroSection = () => {
             Crie fan tokens verificados, engaje sua torcida e monetize sua paixão em uma plataforma segura e transparente.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button 
-              size="lg"
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
-            >
-              <Rocket className="mr-2 h-5 w-5" />
-              Launch App
-            </Button>
+            <LaunchAppButton
+  size="lg"
+  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
+  href="/app"
+/>
           </div>
         </div>
       </div>

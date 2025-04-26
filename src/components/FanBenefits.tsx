@@ -1,5 +1,6 @@
 import React from "react";
 import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
+import LaunchAppButton from "@/components/LaunchAppButton";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -93,14 +94,12 @@ const FanBenefits = () => {
                 </div>
               ))}
             </div>
-            <Button 
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300 animate-fade-in"
-              size="lg"
-              style={{ animationDelay: "0.55s" }}
-            >
-              <Rocket className="mr-2 h-5 w-5" />
-              Launch App
-            </Button>
+            <LaunchAppButton
+  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
+  size="lg"
+  animationDelay="0.55s"
+  href="/app"
+/>
           </div>
           <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
@@ -125,7 +124,6 @@ const FanBenefits = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent z-0 pointer-events-none transition-all duration-1000" />
                 <div className="relative z-10 p-8 text-white w-full">
-                  <h3 className="text-2xl font-bold mb-2">Histórias de Sucesso</h3>
                   <p className="text-white/80 mb-4">
                     Torcedores que participaram de fan tokens aumentaram seu engajamento em até 75%.
                   </p>
