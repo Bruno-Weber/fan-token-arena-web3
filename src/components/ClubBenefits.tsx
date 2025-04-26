@@ -1,6 +1,7 @@
 
 import React from "react";
 import { TrendingUp, Users, Wallet, Trophy, Rocket } from "lucide-react";
+import LaunchAppButton from "@/components/LaunchAppButton";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -80,14 +81,12 @@ const ClubBenefits = () => {
                 </div>
               ))}
             </div>
-            <Button 
-              className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6 animate-fade-in"
-              size="lg"
-              style={{ animationDelay: "0.55s" }}
-            >
-              <Rocket className="mr-2 h-5 w-5" />
-              Launch App
-            </Button>
+            <LaunchAppButton
+  className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6"
+  size="lg"
+  animationDelay="0.55s"
+  href="/app"
+/>
           </div>
           <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">

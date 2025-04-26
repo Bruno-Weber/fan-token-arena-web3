@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import LaunchAppButton from "@/components/LaunchAppButton";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
@@ -54,10 +55,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <Button className="bg-primary hover:bg-primary/90 neon-box text-lg px-8 py-6" size="lg">
-            <Rocket className="mr-2 h-5 w-5" />
-            Launch App
-          </Button>
+          <LaunchAppButton href="/app" />
         </div>
       </div>
     </nav>
