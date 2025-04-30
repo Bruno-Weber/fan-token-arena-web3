@@ -7,6 +7,8 @@ interface LaunchAppButtonProps {
   size?: "sm" | "lg" | "default" | "icon";
   style?: React.CSSProperties;
   animationDelay?: string;
+  children?: React.ReactNode;
+  href?: string;
 }
 
 const LaunchAppButton: React.FC<LaunchAppButtonProps> = ({
@@ -14,10 +16,11 @@ const LaunchAppButton: React.FC<LaunchAppButtonProps> = ({
   size = "lg",
   style,
   animationDelay,
+  children,
+  href = "https://app.tokenarena.club/",
   ...props
 }) => {
   const handleClick = () => {
-    const href = "https://app.tokenarena.club/";
     window.location.href = href;
   };
 
@@ -30,7 +33,7 @@ const LaunchAppButton: React.FC<LaunchAppButtonProps> = ({
       {...props}
     >
       <Rocket className="mr-2 h-5 w-5" />
-      Launch App
+      {children || "Launch App"}
     </Button>
   );
 };

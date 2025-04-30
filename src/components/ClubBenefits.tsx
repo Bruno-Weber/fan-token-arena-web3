@@ -10,20 +10,22 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import SectionFadeIn from "./SectionFadeIn";
+import { useTranslation } from 'react-i18next';
 
 const ClubBenefits = () => {
+  const { t } = useTranslation();
   const clubImages = [
     {
       url: "/lovable-uploads/0281b172-d21c-4809-8a10-2cb45489c2f1.png",
-      alt: "Reunião da CBF"
+      alt: t('images.cbfMeeting')
     },
     {
       url: "/lovable-uploads/32a7a01b-762a-4545-855f-b70c8e3f22c9.png",
-      alt: "Assembleia de clube de futebol"
+      alt: t('images.clubAssembly')
     },
     {
       url: "/lovable-uploads/9432b616-6a49-4765-9c12-938accd505e2.png",
-      alt: "Conselho do clube"
+      alt: t('images.clubCouncil')
     }
   ];
 
@@ -39,32 +41,32 @@ const ClubBenefits = () => {
 
   const benefits = [{
     icon: <TrendingUp className="h-10 w-10 text-sport-blue" />,
-    title: "Monetização Direta",
-    description: "Crie uma nova fonte de receita recorrente através da venda de fan tokens e transações secundárias."
+    title: t('clubBenefits.benefit1Title'),
+    description: t('clubBenefits.benefit1Description')
   }, {
     icon: <Users className="h-10 w-10 text-sport-green" />,
-    title: "Engajamento da Torcida",
-    description: "Conecte-se com sua torcida globalmente e aumente a participação em decisões do clube."
+    title: t('clubBenefits.benefit2Title'),
+    description: t('clubBenefits.benefit2Description')
   }, {
     icon: <Wallet className="h-10 w-10 text-web3-primary" />,
-    title: "Economia do Clube",
-    description: "Desenvolva um ecossistema econômico próprio em torno do seu token e fidelize seus torcedores."
+    title: t('clubBenefits.benefit3Title'),
+    description: t('clubBenefits.benefit3Description')
   }, {
     icon: <Trophy className="h-10 w-10 text-sport-red" />,
-    title: "Dados e Insights",
-    description: "Acesse informações valiosas sobre sua base de fãs para tomadas de decisão estratégicas."
+    title: t('clubBenefits.benefit3Title'),
+    description: t('clubBenefits.benefit3Description')
   }];
 
   return (
-    <SectionFadeIn id="clubes" className="scroll-mt-24" className="bg-[#0A0A0A] py-24">
+    <SectionFadeIn className="bg-[#0A0A0A] py-24 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
-              Benefícios para <span className="text-gradient">Clubes</span>
+              <span className="text-gradient">{t('clubBenefits.title')}</span>
             </h2>
             <p className="text-lg text-white/70 mb-8 animate-fade-in" style={{ animationDelay: "0.12s" }}>
-              Transforme sua relação com os torcedores e abra novas possibilidades de receita e engajamento através dos fan tokens.
+              {t('clubBenefits.description')}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               {benefits.map((benefit, index) => (
@@ -86,7 +88,9 @@ const ClubBenefits = () => {
   size="lg"
   animationDelay="0.55s"
   href="/app"
-/>
+>
+  {t('navbar.launchApp')}
+</LaunchAppButton>
           </div>
           <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
@@ -106,15 +110,15 @@ const ClubBenefits = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                 <div className="p-8 text-white">
                   <p className="text-white/80 mb-4">
-                    Clubes aumentaram sua receita em até 30% no primeiro ano após o lançamento de fan tokens.
+                    {t('stats.clubRevenue')}
                   </p>
                   <div className="flex items-center space-x-2">
                     <div className="bg-web3-dark rounded-full h-10 w-10 flex items-center justify-center">
                       <Trophy className="h-6 w-6 text-sport-red" />
                     </div>
                     <div>
-                      <p className="font-bold">+200 Clubes</p>
-                      <p className="text-sm text-white/70">Já utilizam nossa plataforma</p>
+                      <p className="font-bold">{t('stats.clubCount')}</p>
+                      <p className="text-sm text-white/70">{t('stats.platformUsage')}</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +132,7 @@ const ClubBenefits = () => {
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-white">+45%</p>
-                  <p className="text-xs text-white/70">Aumento de receita</p>
+                  <p className="text-xs text-white/70">{t('stats.engagement')}</p>
                 </div>
               </div>
             </div>
@@ -142,7 +146,7 @@ const ClubBenefits = () => {
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-white">3.2M</p>
-                  <p className="text-xs text-white/70">Fãs engajados</p>
+                  <p className="text-xs text-white/70">{t('stats.engagedFans')}</p>
                 </div>
               </div>
             </div>

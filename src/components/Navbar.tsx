@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -16,6 +18,8 @@ const scrollTo = (id: string) => {
 const Navbar = () => {
   const scrollTo = useScrollTo();
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -39,19 +43,19 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-8 font-medium items-center">
           <button onClick={() => scrollTo("como-funciona")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
-            Como Funciona
+            {t('navbar.howItWorks')}
           </button>
           <button onClick={() => scrollTo("clubes")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
-            Para Clubes
+            {t('navbar.forClubs')}
           </button>
           <button onClick={() => scrollTo("torcedores")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
-            Para Torcedores
+            {t('navbar.forFans')}
           </button>
           <button onClick={() => scrollTo("nfts")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
-            NFTs
+            {t('navbar.nfts')}
           </button>
           <button onClick={() => scrollTo("faq")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
-            FAQ
+            {t('navbar.faq')}
           </button>
 
           {/* Dropdown Whitepaper estilizado como texto */}
@@ -62,23 +66,23 @@ const Navbar = () => {
                 tabIndex={0}
                 role="button"
               >
-                Whitepaper
+                {t('navbar.whitepaper')}
               </span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/whitepaper-geral.pdf" download target="_blank" rel="noopener noreferrer">
-                  Geral
+                <a href="/whitepapers/pt/whitepaper-geral.pdf" data-whitepaper-type="general" download target="_blank" rel="noopener noreferrer">
+                  {t('navbar.general')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/whitepaper-torcedor.pdf" download target="_blank" rel="noopener noreferrer">
-                  Torcedor
+                <a href="/whitepapers/pt/whitepaper-torcedor.pdf" data-whitepaper-type="fan" download target="_blank" rel="noopener noreferrer">
+                  {t('navbar.fan')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/whitepaper-clube.pdf" download target="_blank" rel="noopener noreferrer">
-                  Clube
+                <a href="/whitepapers/pt/whitepaper-clube.pdf" data-whitepaper-type="club" download target="_blank" rel="noopener noreferrer">
+                  {t('navbar.club')}
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -86,7 +90,10 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <LaunchAppButton href="/app" />
+          <LanguageSwitcher />
+          <LaunchAppButton href="/app">
+            {t('navbar.launchApp')}
+          </LaunchAppButton>
         </div>
       </div>
     </nav>

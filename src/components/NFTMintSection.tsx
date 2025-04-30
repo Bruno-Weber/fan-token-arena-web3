@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import SectionFadeIn from "./SectionFadeIn";
 import { Diamond, Gift, Badge, Trophy } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 // Galeria de imagens fornecidas
 const nftImages = [
@@ -27,30 +28,32 @@ const nftImages = [
   },
 ];
 
-const benefitList = [
-  {
-    icon: <Diamond className="h-7 w-7 text-cyan-300 animate-pulse" />,
-    title: "Vantagens VIP",
-    desc: "Acesse benefícios exclusivos em experiências digitais e físicas."
-  },
-  {
-    icon: <Badge className="h-7 w-7 text-yellow-400 animate-bounce" />,
-    title: "Reconhecimento Único",
-    desc: "Destaque-se como membro premium da comunidade do seu clube."
-  },
-  {
-    icon: <Trophy className="h-7 w-7 text-pink-400 animate-float" />,
-    title: "Recompensas Surpresa",
-    desc: "Participe de sorteios, brindes e experiências com os ídolos do esporte."
-  },
-  {
-    icon: <Gift className="h-7 w-7 text-violet-300 animate-spin" />,
-    title: "NFTs Colecionáveis",
-    desc: "Colecione cards digitais raros e comprove sua paixão pelo seu clube."
-  },
-];
-
 const NFTMintSection = () => {
+  const { t } = useTranslation();
+  
+  const benefitList = [
+    {
+      icon: <Diamond className="h-7 w-7 text-cyan-300 animate-pulse" />,
+      title: t('nftSection.benefit1Title'),
+      desc: t('nftSection.benefit1Desc')
+    },
+    {
+      icon: <Badge className="h-7 w-7 text-yellow-400 animate-bounce" />,
+      title: t('nftSection.benefit2Title'),
+      desc: t('nftSection.benefit2Desc')
+    },
+    {
+      icon: <Trophy className="h-7 w-7 text-pink-400 animate-float" />,
+      title: t('nftSection.benefit3Title'),
+      desc: t('nftSection.benefit3Desc')
+    },
+    {
+      icon: <Gift className="h-7 w-7 text-violet-300 animate-spin" />,
+      title: t('nftSection.benefit4Title'),
+      desc: t('nftSection.benefit4Desc')
+    },
+  ];
+
   // Alternância das imagens da coleção
   const [imgIndex, setImgIndex] = useState(0);
 
@@ -62,7 +65,7 @@ const NFTMintSection = () => {
   }, []);
 
   return (
-    <SectionFadeIn id="nfts" className="scroll-mt-24" className="relative py-16 md:py-24 bg-gradient-to-b from-[#221F26] via-[#8B5CF6] to-[#0A0A0A] overflow-hidden">
+    <SectionFadeIn className="relative py-16 md:py-24 bg-gradient-to-b from-[#221F26] via-[#8B5CF6] to-[#0A0A0A] overflow-hidden scroll-mt-24">
       {/* Gradient decorativos animados */}
       <div className="absolute left-0 top-0 h-56 w-56 rounded-full blur-3xl bg-gradient-to-tr from-cyan-400/30 to-violet-400/20 animate-float -z-10" style={{ animationDelay: "1.2s" }} />
       <div className="absolute right-0 bottom-0 h-44 w-44 rounded-full blur-2xl bg-gradient-to-br from-pink-400/30 to-yellow-300/10 animate-float -z-10" style={{ animationDelay: "2.4s" }} />
@@ -89,10 +92,10 @@ const NFTMintSection = () => {
         {/* Texto e benefícios */}
         <div className="md:w-1/2 space-y-7">
           <h2 className="text-3xl md:text-4xl font-bold text-gradient neon-text animate-fade-in">
-            MINT EXCLUSIVO DE <span className="text-web3-primary">NFTs</span>
+            {t('nftSection.title')}
           </h2>
           <p className="text-lg text-white/80 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Libere benefícios extras na plataforma ao mintar NFTs oficiais. Cada coleção é limitada, com designs únicos para torcedores apaixonados!
+            {t('nftSection.description')}
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
             {benefitList.map((b, idx) => (
@@ -106,7 +109,7 @@ const NFTMintSection = () => {
             ))}
           </ul>
           <button className="mt-2 px-7 py-4 rounded-lg text-lg font-bold shadow-xl bg-gradient-to-r from-web3-primary via-sport-blue to-web3-accent text-white hover:scale-105 transition-all neon-shadow animate-fade-in" style={{ animationDelay: "0.55s" }}>
-            Mintar meu NFT
+            {t('nftSection.mintButton')}
           </button>
         </div>
       </div>

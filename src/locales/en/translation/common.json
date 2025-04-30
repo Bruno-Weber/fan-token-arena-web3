@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "howItWorks": "How It Works",
+    "forClubs": "For Clubs",
+    "forFans": "For Fans",
+    "nfts": "NFTs",
+    "faq": "FAQ",
+    "whitepaper": "Whitepaper",
+    "general": "General",
+    "fan": "Fan",
+    "club": "Club",
+    "launchApp": "Launch App"
+  },
+  "footer": {
+    "connecting": "Connecting clubs and fans through exclusive tokens.",
+    "contact": "Contact",
+    "contactText": "Get in touch to learn more about how we can help your club or enhance your fan experience.",
+    "joinCommunity": "Join the Community",
+    "stayUpdated": "Stay up to date with the latest news and releases.",
+    "joinDiscord": "Join Discord"
+  },
+  "hero": {
+    "title": "Revolutionize the Fan Experience",
+    "subtitle": "Fan Token platform that connects clubs and fans through exclusive tokens and unique experiences.",
+    "ctaButton": "Learn More"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "TokenArena revolutionizes the relationship between clubs and fans through an innovative blockchain platform.",
+    "step1Title": "Tokenization",
+    "step1Description": "Clubs create exclusive tokens that represent benefits and experiences for fans.",
+    "step2Title": "Engagement",
+    "step2Description": "Fans acquire tokens to participate in votes, access exclusive content, and much more.",
+    "step3Title": "Rewards",
+    "step3Description": "Fans receive rewards for their loyalty and participation in the club's ecosystem."
+  },
+  "clubBenefits": {
+    "title": "Benefits for Clubs",
+    "description": "Transform your relationship with fans and create new revenue streams.",
+    "benefit1Title": "New Revenue",
+    "benefit1Description": "Create new revenue streams through token sales and royalties on secondary transactions.",
+    "benefit2Title": "Engagement",
+    "benefit2Description": "Increase fan engagement with exclusive votes and decisions for token holders.",
+    "benefit3Title": "Data",
+    "benefit3Description": "Access valuable data about your most engaged fans and their preferences."
+  },
+  "fanBenefits": {
+    "title": "Benefits for Fans",
+    "description": "Have a unique experience with your favorite club and be rewarded for your loyalty.",
+    "benefit1Title": "Participation",
+    "benefit1Description": "Participate in club decisions through exclusive votes for token holders.",
+    "benefit2Title": "Experiences",
+    "benefit2Description": "Access exclusive experiences, such as meeting players and visiting the training center.",
+    "benefit3Title": "Rewards",
+    "benefit3Description": "Receive rewards for your loyalty and participation in the club's ecosystem.",
+    "benefit4Title": "Value Potential",
+    "benefit4Description": "Your token can increase in value as the club's performance and popularity grow."
+  },
+  "nftSection": {
+    "title": "Exclusive NFTs",
+    "description": "Collect exclusive NFTs from your favorite club and unlock unique benefits.",
+    "mintButton": "Mint NFT",
+    "comingSoon": "Coming Soon",
+    "benefit1Title": "VIP Advantages",
+    "benefit1Desc": "Access exclusive benefits in digital and physical experiences.",
+    "benefit2Title": "Unique Recognition",
+    "benefit2Desc": "Stand out as a premium member of your club's community.",
+    "benefit3Title": "Surprise Rewards",
+    "benefit3Desc": "Participate in raffles, giveaways, and experiences with sports idols.",
+    "benefit4Title": "Collectible NFTs",
+    "benefit4Desc": "Collect rare digital cards and prove your passion for your club."
+  },
+  "stats": {
+    "clubRevenue": "Clubs increased their revenue by up to 30% in the first year after launching fan tokens.",
+    "clubCount": "+200 Clubs",
+    "platformUsage": "Already using our platform",
+    "fanEngagement": "Fans who participated in fan tokens increased their engagement by up to 75%.",
+    "fanCount": "+100k Fans",
+    "tokenUsage": "Already using fan tokens",
+    "engagementIncrease": "+75%",
+    "engagement": "Engagement",
+    "tokenCount": "3.5M",
+    "tokensIssued": "Tokens Issued",
+    "engagedFans": "Engaged fans"
+  },
+
+  "images": {
+    "cbfMeeting": "CBF Meeting",
+    "clubAssembly": "Football Club Assembly",
+    "clubCouncil": "Club Council Meeting",
+    "clubAdministration": "Club Administration Board"
+  },
+
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Get answers to your questions about our platform",
+    "question1": "What are Fan Tokens?",
+    "answer1": "Fan Tokens are digital assets that represent participation rights and exclusive benefits for club fans.",
+    "question2": "How to acquire Fan Tokens?",
+    "answer2": "You can acquire Fan Tokens directly on the TokenArena platform using cryptocurrencies or credit card.",
+    "question3": "What benefits do Fan Tokens offer?",
+    "answer3": "Fan Tokens offer various benefits, such as participation in club votes, access to exclusive content, unique experiences, and rewards.",
+    "question4": "Do Fan Tokens expire?",
+    "answer4": "No, Fan Tokens do not expire and can be transferred or sold at any time on the secondary market.",
+    "question5": "Is it safe to buy Fan Tokens?",
+    "answer5": "Yes, the TokenArena platform uses blockchain technology to ensure the security and transparency of all transactions."
+  }
+}
