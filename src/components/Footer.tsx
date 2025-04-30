@@ -28,7 +28,7 @@ const Footer = () => {
           </p>
           <Button variant="outline" className="w-full justify-start">
             <Mail className="mr-2 h-4 w-4" />
-            contato@tokenarena.com
+            contato@tokenarena.club
           </Button>
         </div>
 
