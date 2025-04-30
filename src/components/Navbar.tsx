@@ -4,6 +4,7 @@ import LaunchAppButton from "@/components/LaunchAppButton";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -36,7 +37,7 @@ const Navbar = () => {
           <span className="text-2xl font-bold neon-glow">TokenArena</span>
         </div>
 
-        <div className="hidden md:flex space-x-8 font-medium">
+        <div className="hidden md:flex space-x-8 font-medium items-center">
           <button onClick={() => scrollTo("como-funciona")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
             Como Funciona
           </button>
@@ -52,6 +53,36 @@ const Navbar = () => {
           <button onClick={() => scrollTo("faq")} className="cursor-pointer text-foreground/90 hover:text-primary transition-colors">
             FAQ
           </button>
+
+          {/* Dropdown Whitepaper estilizado como texto */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <span
+                className="cursor-pointer text-foreground/90 hover:text-primary transition-colors px-0 py-0 bg-transparent border-none shadow-none select-none"
+                tabIndex={0}
+                role="button"
+              >
+                Whitepaper
+              </span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <a href="/whitepapers/whitepaper-geral.pdf" download target="_blank" rel="noopener noreferrer">
+                  Geral
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/whitepapers/whitepaper-torcedor.pdf" download target="_blank" rel="noopener noreferrer">
+                  Torcedor
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/whitepapers/whitepaper-clube.pdf" download target="_blank" rel="noopener noreferrer">
+                  Clube
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         <div className="flex items-center space-x-4">
