@@ -1,0 +1,108 @@
+{
+  "navbar": {
+    "howItWorks": "Comment Ça Marche",
+    "forClubs": "Pour les Clubs",
+    "forFans": "Pour les Supporters",
+    "nfts": "NFTs",
+    "faq": "FAQ",
+    "whitepaper": "Livre Blanc",
+    "general": "Général",
+    "fan": "Supporter",
+    "club": "Club",
+    "launchApp": "Lancer l'App"
+  },
+  "footer": {
+    "connecting": "Connecter les clubs et les supporters grâce à des tokens exclusifs.",
+    "contact": "Contact",
+    "contactText": "Contactez-nous pour en savoir plus sur la façon dont nous pouvons aider votre club ou améliorer votre expérience de supporter.",
+    "joinCommunity": "Rejoignez la Communauté",
+    "stayUpdated": "Restez informé des dernières nouvelles et sorties.",
+    "joinDiscord": "Rejoindre Discord"
+  },
+  "hero": {
+    "title": "Révolutionnez l'Expérience des Supporters",
+    "subtitle": "Plateforme de Fan Tokens qui connecte les clubs et les supporters grâce à des tokens exclusifs et des expériences uniques.",
+    "ctaButton": "En Savoir Plus"
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "description": "TokenArena révolutionne la relation entre les clubs et les supporters grâce à une plateforme blockchain innovante.",
+    "step1Title": "Tokenisation",
+    "step1Description": "Les clubs créent des tokens exclusifs qui représentent des avantages et des expériences pour les supporters.",
+    "step2Title": "Engagement",
+    "step2Description": "Les supporters acquièrent des tokens pour participer aux votes, accéder à du contenu exclusif et bien plus encore.",
+    "step3Title": "Récompenses",
+    "step3Description": "Les supporters reçoivent des récompenses pour leur fidélité et leur participation à l'écosystème du club."
+  },
+  "clubBenefits": {
+    "title": "Avantages pour les Clubs",
+    "description": "Transformez votre relation avec les supporters et créez de nouvelles sources de revenus.",
+    "benefit1Title": "Nouveaux Revenus",
+    "benefit1Description": "Créez de nouvelles sources de revenus grâce à la vente de tokens et aux royalties sur les transactions secondaires.",
+    "benefit2Title": "Engagement",
+    "benefit2Description": "Augmentez l'engagement des supporters avec des votes et des décisions exclusifs pour les détenteurs de tokens.",
+    "benefit3Title": "Données",
+    "benefit3Description": "Accédez à des données précieuses sur vos supporters les plus engagés et leurs préférences."
+  },
+  "fanBenefits": {
+    "title": "Avantages pour les Supporters",
+    "description": "Vivez une expérience unique avec votre club préféré et soyez récompensé pour votre fidélité.",
+    "benefit1Title": "Participation",
+    "benefit1Description": "Participez aux décisions du club grâce à des votes exclusifs pour les détenteurs de tokens.",
+    "benefit2Title": "Expériences",
+    "benefit2Description": "Accédez à des expériences exclusives, comme des rencontres avec les joueurs et des visites du centre d'entraînement.",
+    "benefit3Title": "Récompenses",
+    "benefit3Description": "Recevez des récompenses pour votre fidélité et votre participation à l'écosystème du club.",
+    "benefit4Title": "Potentiel de Valorisation",
+    "benefit4Description": "Votre token peut prendre de la valeur à mesure que les performances et la popularité du club augmentent."
+  },
+  "nftSection": {
+    "title": "NFTs Exclusifs",
+    "description": "Collectionnez des NFTs exclusifs de votre club préféré et débloquez des avantages uniques.",
+    "mintButton": "Acquérir un NFT",
+    "comingSoon": "Bientôt Disponible",
+    "benefit1Title": "Avantages VIP",
+    "benefit1Desc": "Accédez à des avantages exclusifs dans des expériences numériques et physiques.",
+    "benefit2Title": "Reconnaissance Unique",
+    "benefit2Desc": "Démarquez-vous en tant que membre premium de la communauté de votre club.",
+    "benefit3Title": "Récompenses Surprises",
+    "benefit3Desc": "Participez à des tirages au sort, des cadeaux et des expériences avec les idoles du sport.",
+    "benefit4Title": "NFTs de Collection",
+    "benefit4Desc": "Collectionnez des cartes numériques rares et prouvez votre passion pour votre club."
+  },
+  "stats": {
+    "clubRevenue": "Les clubs ont augmenté leurs revenus jusqu'à 30% au cours de la première année suivant le lancement des fan tokens.",
+    "clubCount": "+200 Clubs",
+    "platformUsage": "Utilisent déjà notre plateforme",
+    "fanEngagement": "Les supporters qui ont participé aux fan tokens ont augmenté leur engagement jusqu'à 75%.",
+    "fanCount": "+100k Supporters",
+    "tokenUsage": "Utilisent déjà des fan tokens",
+    "engagementIncrease": "+75%",
+    "engagement": "Engagement",
+    "tokenCount": "3.5M",
+    "tokensIssued": "Tokens Émis",
+    "engagedFans": "Supporters engagés"
+  },
+
+  "images": {
+    "cbfMeeting": "Réunion de la CBF",
+    "clubAssembly": "Assemblée du club de football",
+    "clubCouncil": "Conseil du club",
+    "clubAdministration": "Conseil d'administration du club"
+  },
+
+  "faqSection": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Obtenez des réponses à vos questions sur notre plateforme",
+    "question1": "Que sont les Fan Tokens?",
+    "answer1": "Les Fan Tokens sont des actifs numériques qui représentent des droits de participation et des avantages exclusifs pour les supporters d'un club.",
+    "question2": "Comment acquérir des Fan Tokens?",
+    "answer2": "Vous pouvez acquérir des Fan Tokens directement sur la plateforme TokenArena en utilisant des cryptomonnaies ou une carte de crédit.",
+    "question3": "Quels avantages offrent les Fan Tokens?",
+    "answer3": "Les Fan Tokens offrent divers avantages, comme la participation aux votes du club, l'accès à du contenu exclusif, des expériences uniques et des récompenses.",
+    "question4": "Les Fan Tokens ont-ils une date d'expiration?",
+    "answer4": "Non, les Fan Tokens n'ont pas de date d'expiration et peuvent être transférés ou vendus à tout moment sur le marché secondaire.",
+    "question5": "Est-il sûr d'acheter des Fan Tokens?",
+    "answer5": "Oui, la plateforme TokenArena utilise la technologie blockchain pour garantir la sécurité et la transparence de toutes les transactions."
+  }
+}

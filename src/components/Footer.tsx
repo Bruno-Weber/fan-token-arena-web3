@@ -2,8 +2,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Rocket, MessageSquare } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gradient-to-b from-[#0A0A0A] to-[#0B0B0F] text-white py-16">
       <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
@@ -17,14 +19,14 @@ const Footer = () => {
             <span className="text-3xl font-bold neon-glow">TokenArena</span>
           </div>
           <p className="text-gray-400">
-            Conectando clubes e torcedores através de tokens exclusivos.
+            {t('footer.connecting')}
           </p>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold">Contato</h3>
+          <h3 className="text-xl font-semibold">{t('footer.contact')}</h3>
           <p className="text-gray-400">
-            Entre em contato para saber mais sobre como podemos ajudar seu clube ou sua experiência como torcedor.
+            {t('footer.contactText')}
           </p>
           <Button variant="outline" className="w-full justify-start">
             <Mail className="mr-2 h-4 w-4" />
@@ -33,9 +35,9 @@ const Footer = () => {
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xl font-semibold">Junte-se à Comunidade</h3>
+          <h3 className="text-xl font-semibold">{t('footer.joinCommunity')}</h3>
           <p className="text-gray-400">
-            Fique por dentro das últimas novidades e lançamentos.
+            {t('footer.stayUpdated')}
           </p>
           <Button 
             className="bg-primary hover:bg-primary/90 neon-box text-lg" 
@@ -43,7 +45,7 @@ const Footer = () => {
             onClick={() => window.open("https://discord.gg/tokenarena", "_blank")}
           >
             <MessageSquare className="mr-2 h-5 w-5" />
-            Entrar no Discord
+            {t('footer.joinDiscord')}
           </Button>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { Trophy, Wallet, Bitcoin, Activity } from "lucide-react";
 import { FloatingCoin, FloatingTrophy, ParticlesBackground, GradientBubble } from "./AnimatedElements";
+import { useTranslation } from 'react-i18next';
 
 const sportImages = [
   "https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=1200&auto=format&fit=crop&q=80",
@@ -14,6 +15,7 @@ const sportImages = [
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { t } = useTranslation();
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,18 +44,19 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 neon-glow animate-fade-in">
-            Conectando <span className="text-gradient">Torcedores</span> e{" "}
-            <span className="text-gradient">Clubes</span> pelo Mundo
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Crie fan tokens verificados, engaje sua torcida e monetize sua paixão em uma plataforma segura e transparente.
+            {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <LaunchAppButton
   size="lg"
   className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
   href="/app"
-/>
+>
+  {t('hero.ctaButton')}
+</LaunchAppButton>
           </div>
         </div>
       </div>
