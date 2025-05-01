@@ -1,25 +1,51 @@
-
 import { useState, useEffect } from "react";
 import LaunchAppButton from "@/components/LaunchAppButton";
-import { Button } from "@/components/ui/button";
-import { Rocket } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const scrollTo = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+const whitepapersMap: Record<string, Record<string, string>> = {
+  pt: {
+    general: '/whitepapers/pt/whitepaper-geral.pdf',
+    fan: '/whitepapers/pt/whitepaper-torcedor.pdf',
+    club: '/whitepapers/pt/whitepaper-clube.pdf'
+  },
+  en: {
+    general: '/whitepapers/en/whitepaper-general.pdf',
+    fan: '/whitepapers/en/whitepaper-fan.pdf',
+    club: '/whitepapers/en/whitepaper-club.pdf'
+  },
+  fr: {
+    general: '/whitepapers/fr/whitepaper-general.pdf',
+    fan: '/whitepapers/fr/whitepaper-supporter.pdf',
+    club: '/whitepapers/fr/whitepaper-club.pdf'
+  },
+  es: {
+    general: '/whitepapers/es/whitepaper-general.pdf',
+    fan: '/whitepapers/es/whitepaper-aficionado.pdf',
+    club: '/whitepapers/es/whitepaper-club.pdf'
   }
 };
 
 const Navbar = () => {
   const scrollTo = useScrollTo();
   const [scrolled, setScrolled] = useState(false);
-  const { t } = useTranslation();
-  
+  const { t, i18n } = useTranslation();
+
+  const updateWhitepaperLinks = (lng: string) => {
+    const whitepapersLinks = document.querySelectorAll('a[data-whitepaper-type]');
+    
+    whitepapersLinks.forEach((link) => {
+      const element = link as HTMLAnchorElement;
+      const type = element.getAttribute('data-whitepaper-type');
+      
+      if (type && whitepapersMap[lng] && whitepapersMap[lng][type]) {
+        element.href = whitepapersMap[lng][type];
+      }
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -27,6 +53,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-background/90 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-6"
@@ -71,17 +98,17 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/pt/whitepaper-geral.pdf" data-whitepaper-type="general" download target="_blank" rel="noopener noreferrer">
+                <a href={whitepapersMap[i18n.language]['general']} data-whitepaper-type="general" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.general')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/pt/whitepaper-torcedor.pdf" data-whitepaper-type="fan" download target="_blank" rel="noopener noreferrer">
+                <a href={whitepapersMap[i18n.language]['fan']} data-whitepaper-type="fan" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.fan')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="/whitepapers/pt/whitepaper-clube.pdf" data-whitepaper-type="club" download target="_blank" rel="noopener noreferrer">
+                <a href={whitepapersMap[i18n.language]['club']} data-whitepaper-type="club" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.club')}
                 </a>
               </DropdownMenuItem>
