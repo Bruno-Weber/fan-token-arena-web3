@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import LaunchAppButton from "@/components/LaunchAppButton";
-import { Button } from "@/components/ui/button";
-import { Rocket } from "lucide-react";
-import { Trophy, Wallet, Bitcoin, Activity } from "lucide-react";
-import { FloatingCoin, FloatingTrophy, ParticlesBackground, GradientBubble } from "./AnimatedElements";
+import { ParticlesBackground, GradientBubble } from "./AnimatedElements";
 import { useTranslation } from 'react-i18next';
 
 const sportImages = [
@@ -51,12 +48,11 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <LaunchAppButton
-  size="lg"
-  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
-  href="/app"
->
-  {t('hero.ctaButton')}
-</LaunchAppButton>
+              size="lg"
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
+            >
+              {t('hero.ctaButton')}
+            </LaunchAppButton>
           </div>
         </div>
       </div>

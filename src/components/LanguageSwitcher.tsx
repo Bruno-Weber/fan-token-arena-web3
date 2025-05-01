@@ -48,6 +48,8 @@ const LanguageSwitcher = () => {
   // Atualiza o estado quando o idioma muda
   useEffect(() => {
     setCurrentLanguage(i18n.language);
+    // Atualiza os links dos whitepapers quando o componente é montado ou o idioma muda
+    updateWhitepaperLinks(i18n.language);
   }, [i18n.language]);
 
   // Função para mudar o idioma
