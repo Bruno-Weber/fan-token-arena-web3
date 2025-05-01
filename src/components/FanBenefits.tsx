@@ -1,7 +1,5 @@
-import React from "react";
-import { Bitcoin, Wallet, Trophy, TrendingUp, Rocket } from "lucide-react";
+import { Bitcoin, Wallet, Trophy, TrendingUp } from "lucide-react";
 import LaunchAppButton from "@/components/LaunchAppButton";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -97,13 +95,12 @@ const FanBenefits = () => {
               ))}
             </div>
             <LaunchAppButton
-  className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
-  size="lg"
-  animationDelay="0.55s"
-  href="/app"
->
-  {t('navbar.launchApp')}
-</LaunchAppButton>
+              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 neon-box transition-all duration-300"
+              size="lg"
+              animationDelay="0.55s"
+            >
+              {t('navbar.launchApp')}
+            </LaunchAppButton>
           </div>
           <div className="md:w-1/2 relative animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
