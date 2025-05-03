@@ -57,6 +57,12 @@ const HeroSection = () => {
         </div>
       </div>
 
+      <img
+        src="/images/kiro.png"
+        alt="Mascote Kiro"
+        className="hidden md:block absolute bottom-0 right-10 w-[550px] animate-fade-in drop-shadow-xl"
+      />
+
       <ParticlesBackground />
       <GradientBubble className="h-64 w-64 bg-primary/20 top-1/4 -left-32 blur-3xl" />
       <GradientBubble className="h-96 w-96 bg-primary/20 -top-48 right-1/4 blur-3xl" />
