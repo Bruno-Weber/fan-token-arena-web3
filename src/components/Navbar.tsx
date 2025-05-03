@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import LaunchAppButton from "@/components/LaunchAppButton";
 import { useScrollTo } from "@/hooks/useScrollTo";
@@ -32,6 +33,15 @@ const Navbar = () => {
   const scrollTo = useScrollTo();
   const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
+  
+  // Use a function to safely get whitepaper links with fallback to English
+  const getWhitepaperLink = (type: string): string => {
+    // Get current language or fallback to English if it doesn't exist in our map
+    const currentLang = whitepapersMap[i18n.language] ? i18n.language : 'en';
+    
+    // Return the appropriate whitepaper or default to English general whitepaper
+    return whitepapersMap[currentLang]?.[type] || whitepapersMap.en.general;
+  };
 
   const updateWhitepaperLinks = (lng: string) => {
     const whitepapersLinks = document.querySelectorAll('a[data-whitepaper-type]');
@@ -40,8 +50,9 @@ const Navbar = () => {
       const element = link as HTMLAnchorElement;
       const type = element.getAttribute('data-whitepaper-type');
       
-      if (type && whitepapersMap[lng] && whitepapersMap[lng][type]) {
-        element.href = whitepapersMap[lng][type];
+      if (type) {
+        // Use our safe getter function
+        element.href = getWhitepaperLink(type);
       }
     });
   };
@@ -98,17 +109,17 @@ const Navbar = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem asChild>
-                <a href={whitepapersMap[i18n.language]['general']} data-whitepaper-type="general" download target="_blank" rel="noopener noreferrer">
+                <a href={getWhitepaperLink('general')} data-whitepaper-type="general" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.general')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={whitepapersMap[i18n.language]['fan']} data-whitepaper-type="fan" download target="_blank" rel="noopener noreferrer">
+                <a href={getWhitepaperLink('fan')} data-whitepaper-type="fan" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.fan')}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={whitepapersMap[i18n.language]['club']} data-whitepaper-type="club" download target="_blank" rel="noopener noreferrer">
+                <a href={getWhitepaperLink('club')} data-whitepaper-type="club" download target="_blank" rel="noopener noreferrer">
                   {t('navbar.club')}
                 </a>
               </DropdownMenuItem>
